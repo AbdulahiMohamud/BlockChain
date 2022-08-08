@@ -1,3 +1,4 @@
+package BlockChain;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
@@ -11,7 +12,7 @@ public class StringUtils {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             // applied sha to are input
-            byte[] hash = digest.digest(input.getBytes("UTF_8"));
+            byte[] hash = digest.digest(input.getBytes(StandardCharsets.UTF_8));
             StringBuffer hexString = new StringBuffer();
             for (int i = 0; i < hash.length; i++) {
 
